@@ -8,5 +8,6 @@
 - [Day 05 - Constructors](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2005%20-%20Constructors)
 - [Day 06 - Singleton object, Compaignion Classes and Objects and Case Classes and O](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2006%20-%20Singleton%20object%2C%20Compaignion%20Classes%20and%20Objects%20and%20Case%20Classes%20and%20O)
 - [Day 07 - Strings](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2007%20-%20Strings)
+- [Day 08 - Pattern Matching and Regex](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2008%20-%20Pattern%20Matching%20and%20Regex)
 
 Link to course: [Udemy](https://www.udemy.com/course/scala-programming/)
