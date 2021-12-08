@@ -68,3 +68,112 @@ res22: Array[String] = Array(Hello, hello)
 
 
 /* A. Using Regular expression with getOrElse Function */
+scala> val pattern = "Hellooooooo".r // Trying to search for Hellooooooo
+pattern: scala.util.matching.Regex = Hellooooooo
+
+scala> val stringToFind = "Hello How are you? hello Again"
+stringToFind: String = Hello How are you? hello Again
+
+scala> pattern findFirstIn stringToFind getOrElse("No Match Found") // it will go in else as pattern not found
+res29: String = No Match Found
+
+scala> val pattern = "Hello".r
+pattern: scala.util.matching.Regex = Hello
+
+scala> pattern findFirstIn stringToFind getOrElse("No Match Found") // it will get the value as pattern was found
+res30: String = Hello
+
+
+/* B. Using regular expression with forEach */
+scala> val pattern = "(H|h)ello".r
+pattern: scala.util.matching.Regex = (H|h)ello
+
+scala> val stringToFind = "Hello How are you? hello Again"
+stringToFind: String = Hello How are you? hello Again
+
+scala> pattern findAllIn stringToFind foreach(d=>print(d))
+Hellohello
+
+scala> pattern findAllIn stringToFind foreach(d=>println(d))
+Hello
+Hello
+
+
+/* Intermediate Stage
+    1. Example 1 */
+
+stringToFind: String = Hello i am Able to do it, abl11 able able0
+
+scala> val pattern = "abl[ae]\\d+".r
+pattern: scala.util.matching.Regex = abl[ae]\d+
+
+scala> pattern findAllIn stringToFind toArray
+warning: there were 1 feature warning(s); re-run with -feature for details
+res38: Array[String] = Array(able0)
+
+scala>
+
+scala> val pattern = "abl[ae]\\d*".r
+pattern: scala.util.matching.Regex = abl[ae]\d*
+
+scala> pattern findAllIn stringToFind toArray
+warning: there were 1 feature warning(s); re-run with -feature for details
+res39: Array[String] = Array(able, able0)
+
+scala> val pattern = "[Aa]bl[ae]\\d*".r
+pattern: scala.util.matching.Regex = [Aa]bl[ae]\d*
+
+scala> pattern findAllIn stringToFind toArray
+warning: there were 1 feature warning(s); re-run with -feature for details
+res40: Array[String] = Array(Able, able, able0)
+
+scala> val pattern = "(A|a)bl[ae]\\d*".r
+pattern: scala.util.matching.Regex = (A|a)bl[ae]\d*
+
+scala> pattern findAllIn stringToFind toArray
+warning: there were 1 feature warning(s); re-run with -feature for details
+res41: Array[String] = Array(Able, able, able0)
+
+
+/* 2. Example 2 */
+
+scala> val pattern = "(-)?(\\d+)(\\.\\d*)?".r //listen to video at around 1 hour 40 mins//
+pattern: scala.util.matching.Regex = (-)?(\d+)(\.\d*)?
+
+scala> val stringToFind = "-1.5 divide by 5 is 3 is wrong"
+stringToFind: String = -1.5 divide by 5 is 3 is wrong
+
+scala> pattern findAllIn stringToFind toArray
+warning: there were 1 feature warning(s); re-run with -feature for details
+res44: Array[String] = Array(-1.5, 5, 3)
+
+scala>
+
+scala>
+
+scala> val pattern = """(-)?(\d+)(\.\d*)?""".r
+pattern: scala.util.matching.Regex = (-)?(\d+)(\.\d*)?
+
+scala> pattern findAllIn stringToFind toArray
+warning: there were 1 feature warning(s); re-run with -feature for details
+res45: Array[String] = Array(-1.5, 5, 3)
+
+
+/* 3. More difficult example by extracting the value from regular expression */
+
+scala> val Decimal = """(-)?(\d+)(\.\d*)?""".r
+Decimal: scala.util.matching.Regex = (-)?(\d+)(\.\d*)?
+
+scala> val Decimal(sign, integerpart, decimalpart) = "-1.23"
+sign: String = -
+integerpart: String = 1
+decimalpart: String = .23
+
+scala> val stringToFind = "-1.5 divide by 5 is 3 is wrong"
+stringToFind: String = -1.5 divide by 5 is 3 is wrong
+
+scala> for (Decimal(sign, integerpart, decimalpart) <- Decimal findAllIn stringToFind)
+ | println("Sign is " + sign + "Integer Part is " + integerpart + " Decimal Part is " + decimalpart)
+Sign is -Integer Part is 1 Decimal Part is .5
+Sign is nullInteger Part is 5 Decimal Part is null
+Sign is nullInteger Part is 3 Decimal Part is null
