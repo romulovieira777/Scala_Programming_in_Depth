@@ -12,6 +12,7 @@
 - [Day 09 - Implicit Class](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2009%20-%20Implicit%20Class)
 - [Day 10 - Conditional Statements and Loops](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2010%20-%20Conditional%20Statements%20and%20Loops)
 - [Day 11 - Packages and Import](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2011%20-%20Packages%20and%20Import)
-- [Day 12 - Exceptional Handling]()
+- [Day 12 - Exceptional Handling](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2012%20-%20Exceptional%20Handling)
+- [Day 13 - Traits, Value Class and Universal Trait]()
 
 Link to course: [Udemy](https://www.udemy.com/course/scala-programming/)
