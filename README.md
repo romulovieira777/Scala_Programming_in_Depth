@@ -17,5 +17,6 @@
 - [Day 14 - Arrays](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2014%20-%20Arrays)
 - [Day 15 - Arrays](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2015%20-%20Arrays)
 - [Day 16 - Functional Programming 01](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2016%20-%20Functional%20Programming%2001)
+- [Day 17 - Functional Programming 02](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2017%20-%20Functional%20Programming%2002)
 
 Link to course: [Udemy](https://www.udemy.com/course/scala-programming/)
