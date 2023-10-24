@@ -1,6 +1,6 @@
 object DemoMFunctionByName {
     def main(args: Array[String]): Unit = {
-        println("Main Function: " + exec(time()))
+        println("Main Function: " + exec(time(), time2()))
     }
 
     def time() : Long = {
@@ -8,10 +8,16 @@ object DemoMFunctionByName {
         return System.nanoTime()
     }
 
-    def exec(t: => Long): Long = {
+    def time2() : Long = {
+        println("Inside time2 function")
+        return System.nanoTime()
+    }
+
+    def exec(t: => Long, u: => Long): Long = {
         println("Entering exec function")
-        println("Time: " + t)
-        println("Exiting from exec function)
+        println("Time from time(): " + t)
+        println("Time from time2(): " + u)
+        println("Exiting from exec function")
         return t
     }
 }

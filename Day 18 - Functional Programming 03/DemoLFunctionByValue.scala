@@ -1,6 +1,7 @@
 object DemoLFunctionByValue {
     def main(args: Array[String]): Unit = {
-        println("Main Function: " + exec(time(140698097570299)))
+        var t = time
+        println("Main Function: " + exec(time(), time2()))
     }
 
     def time() : Long = {
@@ -8,11 +9,17 @@ object DemoLFunctionByValue {
         return System.nanoTime()
     }
 
-    def exec(t:Long): Long = {
+    def time2() : Long = {
+        println("Inside time2 function")
+        return System.nanoTime()
+    }
+
+    def exec(i:Long, j:Long): Long = {
         println("Inside exec function")
-        println("Time: " + t)
-        println("Exiting from exec function)
-        return t
+        println("Time from time(): " + i)
+        println("Time from time2(): " + j)
+        println("Exiting from exec function")
+        return i
     }
 }
 
