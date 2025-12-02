@@ -21,5 +21,6 @@
 - [Day 18 - Functional Programming 03](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day%2018%20-%20Functional%20Programming%2003)
 - [Day 19 - Closures](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day_19_Closures_01)
 - [Day 20 - Collections](https://github.com/romulovieira777/Scala_Programming_in_Depth/tree/main/Day_20_Collections)
+- [Day 21 - Collections - List]()
 
 Link to course: [Udemy](https://www.udemy.com/course/scala-programming/)
